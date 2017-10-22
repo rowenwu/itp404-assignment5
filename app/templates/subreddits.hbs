@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm-12">
+    <p>{{model.length}} threads:</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3">
+    <ul class="list-group">
+      {{#each model as |subreddit|}}
+        <h4> Title: {{subreddit.data.title}}</h4>
+        <li class="list-group-item">
+            number of comments: {{subreddit.data.num_comments}}
+        </li>
+        <li class="list-group-item">
+            ups: {{subreddit.data.ups}}
+        </li>
+        <li class="list-group-item">
+            downs: {{subreddit.data.downs}}
+        </li>
+        <li class="list-group-item">
+            domain: {{subreddit.data.domain}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-sm-9">
+  </div>
+</div>
