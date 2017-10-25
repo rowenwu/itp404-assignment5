@@ -4,8 +4,11 @@
       <h1>Subreddit Search</h1>
     </div>
     <div class="col-sm-4 text-right">
-      {{input type="text" value=keywords placeholder="What are you looking for?"}}
-      <button onclick={{action "searchForSubreddits"}}>Search</button>
+      <form onsubmit={{action "searchForSubreddits"}}>
+        {{input type="text" value=keywords placeholder="What are you looking for?"}}
+        {{!-- <button onclick={{action "searchForSubreddits"}}>Search</button> --}}
+          <button type="submit">Search</button>
+      </form>
     </div>
   </div>
   {{outlet}}
