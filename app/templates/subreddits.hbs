@@ -7,7 +7,8 @@
   <div class="col-sm-3">
     <ul class="list-group">
       {{#each model as |subreddit|}}
-        <h4> Title: {{subreddit.data.title}}</h4>
+
+        <h3> Title: {{subreddit.data.title}}</h3>
         <li class="list-group-item">
             number of comments: {{subreddit.data.num_comments}}
         </li>
@@ -20,6 +21,11 @@
         <li class="list-group-item">
             domain: {{subreddit.data.domain}}
         </li>
+        {{#if (eq subreddit.data.thumbnail "self")}}
+            <img src="https://lh3.googleusercontent.com/J41hsV2swVteoeB8pDhqbQR3H83NrEBFv2q_kYdq1xp9vsI1Gz9A9pzjcwX_JrZpPGsa=w300">
+        {{else}}
+            <img src={{subreddit.data.thumbnail}}>
+        {{/if}}
       {{/each}}
     </ul>
   </div>

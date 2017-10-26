@@ -4,7 +4,7 @@
       <h1>Subreddit Search</h1>
     </div>
     <div class="col-sm-4 text-right">
-      <form onsubmit={{action "searchForSubreddits"}}>
+      <form onsubmit={{action "searchForSubreddits" keywords}}>
         {{input type="text" value=keywords placeholder="What are you looking for?"}}
         {{!-- <button onclick={{action "searchForSubreddits"}}>Search</button> --}}
           <button type="submit">Search</button>
