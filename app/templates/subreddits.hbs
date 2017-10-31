@@ -9,6 +9,7 @@
       {{#each model as |subreddit|}}
 
         <h3> Title: {{subreddit.data.title}}</h3>
+        <p> {{relative-time subreddit.data.created}} </p>
         <li class="list-group-item">
             number of comments: {{subreddit.data.num_comments}}
         </li>
