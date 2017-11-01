@@ -6,31 +6,8 @@
 <div class="row">
   <div class="col-sm-3">
     <ul class="list-group">
-      {{#each sortedPosts as |subreddit|}}
-
-        <h3> Title: {{subreddit.data.title}}</h3>
-        <p> {{relative-time subreddit.data.created}} </p>
-        
-        <li class="list-group-item">
-            score: {{subreddit.data.score}}
-        </li>
-        <li class="list-group-item">
-            number of comments: {{subreddit.data.num_comments}}
-        </li>
-        <li class="list-group-item">
-            ups: {{subreddit.data.ups}}
-        </li>
-        <li class="list-group-item">
-            downs: {{subreddit.data.downs}}
-        </li>
-        <li class="list-group-item">
-            domain: {{subreddit.data.domain}}
-        </li>
-        {{#if (eq subreddit.data.thumbnail "self")}}
-            <img src="https://lh3.googleusercontent.com/J41hsV2swVteoeB8pDhqbQR3H83NrEBFv2q_kYdq1xp9vsI1Gz9A9pzjcwX_JrZpPGsa=w300">
-        {{else}}
-            <img src={{subreddit.data.thumbnail}}>
-        {{/if}}
+      {{#each sortedPosts as |post|}}
+        {{reddit-post post=post}}
       {{/each}}
     </ul>
   </div>

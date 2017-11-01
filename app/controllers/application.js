@@ -5,6 +5,7 @@ export default Controller.extend({
     searchForSubreddits() {
       // event.preventDefault();
       this.transitionToRoute('subreddits', {subreddit_name: this.get('keywords')});
+      
     }
   }
 });

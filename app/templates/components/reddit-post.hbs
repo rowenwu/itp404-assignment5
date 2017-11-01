@@ -1,0 +1,24 @@
+<h3> Title: {{post.data.title}}</h3>
+<p> {{relative-time post.data.created}} </p>
+{{#if (eq post.data.thumbnail "self")}}
+    <img src="https://lh3.googleusercontent.com/J41hsV2swVteoeB8pDhqbQR3H83NrEBFv2q_kYdq1xp9vsI1Gz9A9pzjcwX_JrZpPGsa=w300">
+{{else}}
+    <img src={{post.data.thumbnail}}>
+{{/if}}
+
+    {{vote-control 
+    score=post.data.score 
+    onvote=(action "changeScore")}}
+    {{!-- score: {{#link-to "playground" (query-params score=post.data.score)}}{{post.data.score}}{{/link-to}} --}}
+<li class="list-group-item">
+    number of comments: {{post.data.num_comments}}
+</li>
+<li class="list-group-item">
+    ups: {{post.data.ups}}
+</li>
+<li class="list-group-item">
+    downs: {{post.data.downs}}
+</li>
+<li class="list-group-item">
+    domain: {{post.data.domain}}
+</li>

@@ -1,0 +1,15 @@
+<div>
+{{#if upButtonClicked}}
+<i class="fa fa-caret-up"></i>
+{{else}}
+<i class="fa fa-angle-up" onclick={{action "toggleUpButton"}}></i>
+{{/if}}
+</div>
+{{score}}
+<div>
+{{#if downButtonClicked}}
+<i class="fa fa-caret-down"></i>
+{{else}}
+<i class="fa fa-angle-down" onclick={{action "toggleDownButton"}}></i>
+{{/if}}
+</div>
