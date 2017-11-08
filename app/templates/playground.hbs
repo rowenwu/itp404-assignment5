@@ -1,3 +1,5 @@
-{{score}}
 
-{{vote-control}}
+{{#each model as |email|}}
+<br>
+    {{unread-email email=email onclick=(action "markAsRead")}}
+{{/each}}
